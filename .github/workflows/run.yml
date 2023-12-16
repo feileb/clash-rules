@@ -113,7 +113,7 @@ jobs:
       - name: Compress files
         uses: edgarrc/action-7z@v1
         with:
-           args: 7z a -t7z -mx=9 ruleset-${{ env.TAG_NAME }}.7z ./publish/*.txt
+           args: 7z a -t7z -mx=9 ./publish/ruleset-${{ env.TAG_NAME }}.7z ./publish/*.txt
 
       - name: Release and upload assets
         uses: softprops/action-gh-release@v1
